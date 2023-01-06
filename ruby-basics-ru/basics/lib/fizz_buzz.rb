@@ -2,23 +2,23 @@
 
 # BEGIN
 def fizz_buzz(a = 0, b = 0)
-    if a > b
+    if b > a || b == a
         result = ''
         a.upto(b) do |num|
-        if (num.to_f % 3).zero? && (num.to_f % 5).zero?
-        result += 'FizzBuzz '
-        elsif (num.to_f % 3).zero?
-        result += 'Fizz '
-        elsif (num.to_f % 5).zero?
-        result += 'Buzz '
-        else
-        result += num.to_s + " "
+            if (num.to_f % 3).zero? && (num.to_f % 5).zero?
+                result += 'FizzBuzz '
+                elsif (num.to_f % 3).zero?
+                result += 'Fizz '
+                elsif (num.to_f % 5).zero?
+                result += 'Buzz '
+                else
+                result += num.to_s + " "
+            end
         end
-        end
-        result[0..result.size-1]
+        result.chop
     else
         nil
     end
 end
-puts fizz_buzz.nil?
+puts fizz_buzz(7, 7).size
 # END
