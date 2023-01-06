@@ -8,12 +8,13 @@ def fibonacci(n)
     elsif n.negative?
       result = nil
     else
-      results = [1, 1, 2]
-      3.upto(n) do |num|
+      results = [0, 1]
+      2.upto(n) do |num|
         results << results[num-1] + results[num-2]
       end
       result = results.last
     end
     result
 end
+puts fibonacci(2)
 # END
